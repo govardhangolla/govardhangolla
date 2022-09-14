@@ -1,0 +1,20 @@
+/* actually function only returns one value 
+with the help of pointer we can return multiple
+values */
+
+void doWork(int a, int b, int *sum, int *prod, int *avg);
+
+int main(){
+    int a = 3;
+    int b = 5;
+    int sum, prod,avg;
+    doWork(a,b,&sum, &prod, &avg);
+    printf("sum = %d, prod =%d, avg =%d",sum,prod,avg);
+    return 0;
+}
+
+void doWork(int a, int b, int *sum, int *prod, int *avg){
+    *sum = a+b;
+    *prod =  a*b;
+    *avg = (a+b)/2;
+}
